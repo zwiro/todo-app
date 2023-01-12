@@ -24,7 +24,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://www.frontendmentor.io/solutions/todo-app-2OGbKhPvxq)
+- Solution URL: [Solution](https://www.frontendmentor.io/solutions/todo-app-a7O_pnD-b8)
 - Live Site URL: [Live Site](https://zwiro.github.io/todo-app/)
 
 ## My process
