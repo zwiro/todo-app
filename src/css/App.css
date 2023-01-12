@@ -1,0 +1,5 @@
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: hsl(0, 0%, 98%);
+    min-width: 22rem;
+}

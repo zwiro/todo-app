@@ -1,0 +1,53 @@
+.header {
+    background-image: url('../assets/bg-mobile-light.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 12.55rem;
+    color: white;
+    padding: 3rem 1rem;
+
+    &__elements {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 20.5rem;
+        margin-inline: auto;
+    }
+
+    &__title {
+        font-size: 1.7rem;
+        font-weight: 700;
+        letter-spacing: 0.5rem;
+    }
+
+    &__img {
+        height: 1.25rem;
+        cursor: pointer;
+        transition: transform 400ms ease-in-out;
+
+        &:hover {
+            transform: rotate(360deg) scale(1.5);
+        }
+    }
+}
+
+@media (min-width: 700px) {
+    .header {
+        background-image: url('../assets/bg-desktop-light.jpg');
+        height: 19rem;
+        padding-top: 5rem;
+
+        &__elements {
+            width: auto;
+            max-width: 34rem;
+        }
+
+        &__title {
+            font-size: 2.5rem;
+        }
+
+        &__img {
+            height: 1.75rem;
+        }
+    }
+}
