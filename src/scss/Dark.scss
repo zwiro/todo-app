@@ -1,29 +1,29 @@
 .dark {
-    background-color: hsl(235, 21%, 11%);
+  background-color: hsl(235, 21%, 11%);
+  transition: background-color 300ms;
+
+  & .header {
+    background-image: url("/src/assets/bg-mobile-dark.jpg");
+  }
+
+  & .todo > div,
+  input {
+    background-color: hsl(235, 24%, 19%);
     transition: background-color 300ms;
+  }
 
-    & .header {
-        background-image: url('/src/assets/bg-mobile-dark.jpg');
-    }
+  & .todo__item,
+  .todo__input {
+    color: hsl(234, 39%, 85%);
+  }
 
-    & .todo>div,
-    input {
-        background-color: hsl(235, 24%, 19%);
-        transition: background-color 300ms;
-    }
-
-    & .todo__item,
-    .todo__input {
-        color: hsl(234, 39%, 85%);
-    }
-
-    & .todo__item--checked {
-        color: hsl(234, 11%, 52%);
-    }
+  & .todo__item--checked {
+    color: hsl(234, 11%, 52%);
+  }
 }
 
 @media (min-width: 700px) {
-    .dark .header {
-        background-image: url('/src/assets/bg-desktop-dark.jpg');
-    }
+  .dark .header {
+    background-image: url("/src/assets/bg-desktop-dark.jpg");
+  }
 }
