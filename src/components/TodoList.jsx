@@ -4,7 +4,7 @@ import crossIcon from "/src/assets/icon-cross.svg"
 export default function TodoList(props) {
   const filters = ["All", "Active", "Completed"]
   function addClass(e) {
-    console.log(e.target.parentNode.classList.add("deleting"))
+    e.target.parentNode.classList.add("deleting")
   }
 
   return (
