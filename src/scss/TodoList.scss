@@ -36,6 +36,7 @@
         );
       background-repeat: no-repeat;
       background-position: 50% 50%;
+      animation: checkAnimation 300ms ease-in-out;
     }
 
     &:hover {
@@ -176,5 +177,33 @@
       margin-inline: auto;
       box-shadow: none;
     }
+  }
+}
+
+.deleting {
+  animation: deleteAnimation 300ms forwards;
+}
+
+@keyframes checkAnimation {
+  0% {
+    scale: 0;
+  }
+  50% {
+    scale: 0.5;
+  }
+  75% {
+    scale: 1.5;
+  }
+  100% {
+    scale: 1;
+  }
+}
+
+@keyframes deleteAnimation {
+  50% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(-200%);
   }
 }

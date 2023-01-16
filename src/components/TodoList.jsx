@@ -1,8 +1,11 @@
-import "../scss/TodoList.scss";
-import crossIcon from "/src/assets/icon-cross.svg";
+import "../scss/TodoList.scss"
+import crossIcon from "/src/assets/icon-cross.svg"
 
 export default function TodoList(props) {
-  const filters = ["All", "Active", "Completed"];
+  const filters = ["All", "Active", "Completed"]
+  function addClass(e) {
+    console.log(e.target.parentNode.classList.add("deleting"))
+  }
 
   return (
     <main className="todo">
@@ -30,8 +33,8 @@ export default function TodoList(props) {
                 draggable
                 onDragStart={() => props.dragItem(item.id)}
                 onDragOver={(e) => {
-                  e.preventDefault();
-                  e.dataTransfer.dropEffect = "move";
+                  e.preventDefault()
+                  e.dataTransfer.dropEffect = "move"
                 }}
                 onDragEnter={(e) => props.dragEnter(e, item.id)}
                 onDrop={() => props.dropItem(item.id)}
@@ -49,10 +52,13 @@ export default function TodoList(props) {
                   className="todo__delete"
                   src={crossIcon}
                   alt=""
-                  onClick={() => props.deleteItem(item.id)}
+                  onClick={(e) => {
+                    addClass(e)
+                    props.deleteItem(item.id)
+                  }}
                 />
               </div>
-            );
+            )
           })}
           <div className="todo__bottom-panel">
             <p>
@@ -77,10 +83,10 @@ export default function TodoList(props) {
             >
               {filter}
             </p>
-          );
+          )
         })}
       </div>
       <p className="todo__info">Drag and drop to reorder list</p>
     </main>
-  );
+  )
 }
